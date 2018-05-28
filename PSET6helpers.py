@@ -15,7 +15,7 @@ def lines(a, b):
     	if i in listb:
     		compared.append(i)
 
-    return compared
+    return list(compared)
 
 
 def sentences(a, b):
@@ -34,7 +34,7 @@ def sentences(a, b):
     	if i in listb:
     		compared.append(i)
 
-    return compared
+    return list(compared)
 
 
 def substrings(a, b, n):
@@ -87,4 +87,4 @@ def substrings(a, b, n):
     	if i in listb:
     		compared.append(i)
 
-    return compared
+    return list(compared)
