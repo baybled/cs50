@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Your Account
+{% endblock %}
+
+{% block main %}
+	<table class=table table-striped>
+		<tr>
+			<th>Current Balance</th>
+			<td>{{ balance }}</td>
+		</tr>
+		<tr>
+			<th>Total Assets</th>
+			<td>{{ total_assets }}</td>
+		</tr>
+	</table>
+	<br><br>
+		<div>
+			<table class=table table-striped>
+				<tr>
+					<th>Stock</th>
+					<th>Shares</th>
+					<th>Current Price</th>
+					<th>Asset Value</th>
+				</tr>
+				{% for row in rows %}
+				<tr>
+					<td>{{ row.stock }}</td>
+					<td>{{ row.shares }}</td>
+					<td>{{ row.prices|usd }}</td>
+					<td>{{ row.holding|usd }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+		<p>
+
+		</p>
+
+{% endblock %}

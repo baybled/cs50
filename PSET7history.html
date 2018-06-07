@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	History
+{% endblock %}
+
+{% block main %}
+	<table class=table table-striped>
+		<tr>
+			<th>When</th>
+			<th>Transaction</th>
+			<th>Shares</th>
+			<th>Stock</th>
+			<th>Price</th>
+		</tr>
+		{% for hist in history| reverse %}
+		<tr>
+			<td>{{ hist.datetime}}</td>
+			<td>{{ hist.buysell }}</td>
+			<td>{{ hist.shares }}</td>
+			<td>{{ hist.symbol }}</td>
+			<td>{{ hist.price|usd }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+
+{% endblock %}

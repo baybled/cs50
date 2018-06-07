@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Stock Quote
+{% endblock %}
+
+{% block main %}
+	<form action="/quote" method="post">
+		<div class="form-group">
+			<label for="stock">Stock</label><br>
+			<input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="e.g. AAPL" type="text"/>
+		</div>
+		<button class="btn btn-primary" type="submit">Check Price</button>
+	</form>
+
+{% endblock %}
